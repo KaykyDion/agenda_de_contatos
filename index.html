@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Agenda de contatos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./images/logo-telefone.png" alt="logo telefone" />
+        <h1>Agenda de contatos</h1>
+      </header>
+      <form id="contact-form">
+        <input
+          type="text"
+          id="contact-name"
+          required
+          placeholder="Nome do contato"
+        />
+        <input
+          type="tel"
+          id="contact-ddd"
+          required
+          minlength="2"
+          maxlength="2"
+          placeholder="DDD"
+        />
+        <input
+          type="tel"
+          id="contact-number"
+          required
+          placeholder="Número de telefone"
+          minlength="8"
+          maxlength="9"
+        />
+        <button type="submit">Salvar contato</button>
+      </form>
+      <p class="error-message">
+        Erro: Nome ou número já exitem na sua lista de contatos.
+      </p>
+      <table cellspacing="0">
+        <caption>
+          <h2>CONTATOS</h2>
+        </caption>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>DDD</th>
+            <th>Número</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
